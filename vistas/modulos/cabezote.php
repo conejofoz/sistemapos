@@ -29,8 +29,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>-->
         </a>
-        
-        
+
+
         <!--PERFIL DE USUARIO-->
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
@@ -39,14 +39,22 @@
                         <img src="vistas/img/usuarios/default/anonymous.png" class="user-image">
                         <span class="hidden-xs">Usuario administrador</span>
                     </a>
+                    <!--DROPDOWN-TOGGLE-->
+                    <ul class="dropdown-menu">
+                        <li class="user-body">
+                            <div class="pull-right">
+                                <a href="" class="btn btn-default btn-flat">Salir</a>
+                            </div>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
-        
-        
-        
-        
-        <!--DROPDOWN-TOGGLE-->
+
+
+
+
+
 
 
     </nav>

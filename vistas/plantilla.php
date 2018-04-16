@@ -68,6 +68,9 @@
         <div class="wrapper">
            <?php 
            include "modulos/cabezote.php";
+           include "modulos/menu.php";
+           include "modulos/contenido.php";
+           include "modulos/footer.php";
            
            ?>
       </div>

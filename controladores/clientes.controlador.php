@@ -7,10 +7,7 @@
  * Descricao
  * @copyright (c) year, Silvio Coelho 
  */
-class ControladorPlantilla {
+class ControladorClientes {
 
-    public function ctrPlantilla() {
-        include "vistas/plantilla.php";
-    }
-
+    
 }

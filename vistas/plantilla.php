@@ -7,12 +7,15 @@
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         
+        <link rel="icon" href="vistas/img/plantilla/icono-negro.png">
         
+
+
         <!--=================================
         PLUGINS CSS
         =================================-->
-    
-        
+
+
         <!-- Bootstrap 3.3.7 -->
         <link rel="stylesheet" href="vistas/bower_components/bootstrap/dist/css/bootstrap.min.css">
         <!-- Font Awesome -->
@@ -54,41 +57,47 @@
         <script src="vistas/dist/js/adminlte.min.js"></script>
         <!-- AdminLTE for demo purposes -->
         <!--<script src="vistas/dist/js/demo.js"></script> DESATIVADO PELO PROFESSOR-->
-        
+
 
     </head>
-    
-    
-    
+
+
+
     <!--=================================
         CORPO DO DOCUMENTO
     =================================-->
-    <body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
-        <!-- Site wrapper -->
-        <div class="wrapper">
-           <?php 
-           include "modulos/cabezote.php";
-           include "modulos/menu.php";
-           
-           if(isset($_GET["ruta"])){
-               if($_GET["ruta"] == "inicio" ||
-                  $_GET["ruta"] == "usuarios" ||
-                  $_GET["ruta"] == "categorias" ||
-                  $_GET["ruta"] == "productos" ||
-                  $_GET["ruta"] == "clientes" ||
-                  $_GET["ruta"] == "ventas" ||
-                  $_GET["ruta"] == "crear-venta" ||
-                  $_GET["ruta"] == "reportes" 
-                  ){
-                   include "modulos/".$_GET["ruta"].".php";
-               }
-           }
-           
-           include "modulos/footer.php";
-           
-           ?>
-      </div>
-        <!-- ./wrapper -->
+    <body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
+        
+            <?php
+            if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
+            echo '<div class="wrapper">';
+            include "modulos/cabezote.php";
+            include "modulos/menu.php";
+
+            if (isset($_GET["ruta"])) {
+                if ($_GET["ruta"] == "inicio" ||
+                        $_GET["ruta"] == "usuarios" ||
+                        $_GET["ruta"] == "categorias" ||
+                        $_GET["ruta"] == "productos" ||
+                        $_GET["ruta"] == "clientes" ||
+                        $_GET["ruta"] == "ventas" ||
+                        $_GET["ruta"] == "crear-venta" ||
+                        $_GET["ruta"] == "reportes") {
+                    include "modulos/" . $_GET["ruta"] . ".php";
+                } else {
+                    include "modulos/404.php";
+                }
+            } else {
+                include "modulos/inicio.php";
+            }
+
+            include "modulos/footer.php";
+            echo '</div>';
+            } else {
+                include "modulos/login.php";
+            }
+            ?>
+            
         <script src="vistas/js/plantilla.js"></script>
     </body>
 </html>

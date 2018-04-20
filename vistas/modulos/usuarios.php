@@ -11,36 +11,88 @@
     </section>
 
 
-
-    <!-- Main content -->
     <section class="content">
 
-        <!-- Default box -->
         <div class="box">
+            <!--====================CABECALHO================================-->
             <div class="box-header with-border">
-                <h3 class="box-title">Title</h3>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario">
+                    Agregar usuario
+                </button>
 
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                            title="Collapse">
-                        <i class="fa fa-minus"></i></button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-                        <i class="fa fa-times"></i></button>
-                </div>
             </div>
+
+
+
+            <!--====================PAGINA================================-->
             <div class="box-body">
-                Start creating your amazing application!
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Usuario</th>
+                            <th>Foto</th>
+                            <th>Perfil</th>
+                            <th>Estado</th>
+                            <th>Último login</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Usuario administrador</td>
+                            <td>admin</td>
+                            <td><img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="40px"></td>
+                            <td>Administrador</td>
+                            <td><button class="btn btn-success btn-xs">Activado</button></td>
+                            <td>2017-12-11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-                Footer
-            </div>
-            <!-- /.box-footer-->
+
+
+
+            <!--====================RODAPE================================-->
+            
         </div>
-        <!-- /.box -->
+ 
 
     </section>
-    <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->
 
+
+
+
+
+
+
+<!-- MODAL AGREGAR USUARIO -->
+<div id="modalAgregarUsuario" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

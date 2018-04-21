@@ -26,7 +26,7 @@
 
             <!--====================PAGINA================================-->
             <div class="box-body">
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped dt-responsive tablas">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -35,7 +35,7 @@
                             <th>Foto</th>
                             <th>Perfil</th>
                             <th>Estado</th>
-                            <th>Último login</th>
+                            <th>Ultimo login</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -47,14 +47,13 @@
                             <td><img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="40px"></td>
                             <td>Administrador</td>
                             <td><button class="btn btn-success btn-xs">Activado</button></td>
-                            <td>2017-12-11</td>
+                            <td>2017</td>
                             <td>
                                 <div class="btn-group">
                                     <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger"><i class="fa fa-times"></i></button>
                                 </div>
                             </td>
-                            <td></td>
                         </tr>
                     </tbody>
                 </table>
